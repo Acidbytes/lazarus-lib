@@ -21,3 +21,6 @@ zipfiles.pas = Functions for create a rar file and for extract content from a ra
 
 sanitize.pas = Function for "sanitize" strings before store it in a table in database, this function erase some chars sequences that may cause problems in SQL, avoid users inject escape sequences in a string.
 
+AutoFitDbGridCol.pas = Turn the column in the grid passed as argument in a autofit column that self adjust it's size on Form resize.
+
+
