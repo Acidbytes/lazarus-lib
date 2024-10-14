@@ -42,6 +42,11 @@ function ValidateCNPJ(NroCNPJ: String): Boolean;
 //    Os mesmos princípios da função ValidateCNPJ são aplicados a esta função.
 function ValidateCPF(NroCPF: String): Boolean;
 
+// Gera um CPF numericamente válido 
+function GenerateCPF(): String;
+
+// Gera um CNPJ numericamente válido
+function GenerateCNPJ(): String;
 
 
 implementation
@@ -206,6 +211,31 @@ begin
 
 end;
 
+function generateRandomNumber(size: byte): String;
+var
+  i: byte;
+  s: String;
+begin  
+  setLength(s, size);
+  for i := 1 to size do s[i] := chr(48 + Random(10));
+  result:=s;
+end;
+       
+function GenerateCPF(): String;
+var 
+  cpf: String;
+begin
+  cpf := generateRandomNumber(9);
+  result := cpf + DigitoCPF(cpf);
+end;
+
+function GenerateCNPJ(): String;
+var
+  cnpj: String;
+begin
+  cnpj := generateRandomNumber(12);
+  result := cnpj + DigitoCNPJ(cnpj);
+end;
 
 end.
 
