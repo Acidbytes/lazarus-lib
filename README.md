@@ -23,4 +23,6 @@ sanitize.pas = Function for "sanitize" strings before store it in a table in dat
 
 AutoFitDbGridCol.pas = Turn the column in the grid passed as argument in a autofit column that self adjust it's size on Form resize.
 
+cpf_cnpj.pas = Functions for calculate digits and validate Brazilian Tax IDs (Personal and Business).
+
 
