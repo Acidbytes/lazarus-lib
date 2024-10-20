@@ -1,3 +1,11 @@
+{
+    uDataSetFunctions.pas
+
+    Rotinas para facilitar o trabalho com DataSets.
+
+    por Rubem Rocha - Manaus, AM - Outubro 2024
+}
+
 unit uDataSetFunctions;
 
 interface
