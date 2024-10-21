@@ -19,6 +19,24 @@ implementation
 
 uses Classes, SysUtils;
 
+{
+    Salva o conteúdo de um descendente de DataSet
+    para um arquivo texto em formato CSV
+
+    Exemplo de chamada:
+    
+    procedure TForm1.Button1Click(Sender: TObject);
+    begin
+      Screen.Cursor := crHourGlass;
+      try
+        SaveDataSetToCSV(ClientDataSet1, '.\clientes.csv', true)
+      finally
+        Screen.Cursor := crDefault;
+        ShowMessage('Arquivo Clientes.csv exportado com sucesso.');
+        DBGrid1.SetFocus;
+      end;
+    end;
+}
 procedure SaveDataSetToCSV(dataSet: TDataSet; filePath: string;
   header: boolean = true; separator: char = ',');
 const
